@@ -1,0 +1,17 @@
+.navbar {
+   display: flex;
+}
+
+.navbar-item {
+    display: inline-block;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    padding: 0px 20px;
+}
+
+.navbar-item:hover {
+    color: #82EE8D;
+}
