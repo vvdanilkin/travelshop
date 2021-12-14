@@ -3,14 +3,14 @@ import './Header.css'
 import {Link} from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 
-const Header = () => {
+const Header = (props) => {
+
+
     return (
 
         <div className="header">
            <h1>
-               <a href="/" className="header-logo">
-               MOSCOW TRAVEL SHOP
-                 </a>
+               <Link to="/" className="header-logo">MOSCOW TRAVEL SHOP</Link>
            </h1>
                 <div className="header-navbar">
                     <Navbar/>

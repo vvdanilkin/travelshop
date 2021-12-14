@@ -1,0 +1,44 @@
+.tour-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 25rem;
+    height: 20rem;
+    text-align: center;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+
+}
+
+.tour-card__image {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+}
+
+.tour-card__price {
+    color: #82EE8D;
+    font-size: 22px;
+}
+
+.tour-card__button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #08457E;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.tour-card__button:hover {
+   opacity: 0.7;
+    color: #82EE8D;
+}
+
+
+

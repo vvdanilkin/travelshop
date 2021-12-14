@@ -1,10 +1,20 @@
 import React from 'react';
+import Tour from "../components/Tour";
+import './Main.css'
 
-const Main = () => {
+const Main = (props) => {
+const {tours, onAdd} = props;
     return (
-        <div>
-           Home
-        </div>
+
+        <section className="tours">
+            <h2>Our tours</h2>
+            <div className="card-container">
+                {tours.map((tour) =>(
+                    <Tour key={tour.id} tour={tour} onAdd={onAdd}></Tour>
+                ))}
+            </div>
+        </section>
+
     );
 };
 

@@ -15,3 +15,10 @@
 .navbar-item:hover {
     color: #82EE8D;
 }
+
+.navbar-badge {
+    background-color: #f04040;
+    border: 1px solid;
+    color: #ffffff;
+    width: 1.5rem;
+}
