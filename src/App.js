@@ -1,6 +1,6 @@
 import './App.css';
 import Header from './components/Header/Header'
-import {Link, Redirect, Route, Switch} from 'react-router-dom';
+import {Route, Switch} from 'react-router-dom';
 import Contacts from "./pages/Contacts";
 import About from "./pages/About";
 import Reviews from "./pages/Reviews";
