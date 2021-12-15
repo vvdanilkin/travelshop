@@ -1,42 +1,45 @@
 import React from 'react';
+import './Cart.css'
 
 export default function Cart(props){
     const {cartItems, onAdd, onRemove} = props;
     const totalPrice = cartItems.reduce((a,c) => a + c.price * c.qty, 0);
     return (
-        <div className="block col-1">
-            <h2>Cart items</h2>
-            <div>
-                {cartItems.length === 0 && <div>Cart is empty</div>}
+        <section className="section-cart">
+            <h2 className="section-cart__title">Your shopping cart</h2>
+        <div className="cart-container">
+            <h2 className="cart-title">Cart items</h2>
+            <hr className="cart-line"/>
+            <div className="cart">
+                {cartItems.length === 0 && <div className="cart-item__empty">Cart is empty</div>}
             {cartItems.map((item) => (
-                <div key={item.id} className="row">
-                <div className="col-2">{item.name}</div>
-                <div className="col-2">
-                <button onClick={()=> onAdd(item)} className="add">+</button>{' '}
-                <button onClick={()=> onRemove(item)} className="remove">-</button>
+                <div key={item.id} className="cart-item__row">
+                <div className="cart-item__name">{item.name}</div>
+                <div className="cart-button__container">
+                <button onClick={()=> onAdd(item)} className="cart-button__add">+</button>{' '}
+                <button onClick={()=> onRemove(item)} className="cart-button__remove">-</button>
                 </div>
-                    <div className="col-2 text-right">
+                    <div className="cart-item__qtyprice">
                         {item.qty} x ${item.price.toFixed(2)}
                     </div>
                 </div>
             ))}
             {cartItems.length !== 0 && (
                 <>
-                    <hr/>
-                    <div>
-                        <div>Total Price</div>
-                            <div>${totalPrice.toFixed(2)}</div>
+                    <hr className="cart-line"/>
+                    <div className="cart-totalprice">
+                        <div className="cart-totalprice__title">Total Price</div>
+                            <div className="cart-totalprice__sum">${totalPrice.toFixed(2)}</div>
                         </div>
                     <hr />
-                    <div className="row">
-                        <button>
+                        <button className="cart-button__book">
                             Book
                         </button>
-                    </div>
                 </>
             )}
         </div>
         </div>
+        </section>
     );
 }
 

@@ -6,8 +6,8 @@ const Main = (props) => {
 const {tours, onAdd} = props;
     return (
 
-        <section className="tours">
-            <h2>Our tours</h2>
+        <section className="section-tours">
+            <h2 className="section-tours__title">Our tours</h2>
             <div className="card-container">
                 {tours.map((tour) =>(
                     <Tour key={tour.id} tour={tour} onAdd={onAdd}></Tour>

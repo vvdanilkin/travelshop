@@ -1,3 +1,17 @@
+
+.section-tours {
+    width: 100%;
+    height: 100%;
+    padding-top: 1rem;
+
+}
+
+.section-tours__title{
+    flex: 2;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
 .card-container{
     display: flex;
     flex-wrap: wrap;
