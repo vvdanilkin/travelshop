@@ -43,14 +43,14 @@ const database = {
             image: "/assets/tours/serpukhov.jpg"
         },
         {
-            id: '3',
+            id: '7',
             name: 'Tour to Arkhangelskoye',
             subtitle: 'During your tour you will enjoy the beautiful estate.',
             price: 128,
             image: "/assets/tours/arkhangelskoye.jpg"
         },
         {
-            id: '4',
+            id: '8',
             name: 'Chaikovsky Museum & Klin Tour',
             subtitle: 'You will visit the museum of Chaikovsky in Klin.',
             price: 142,

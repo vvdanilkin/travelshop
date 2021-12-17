@@ -1,5 +1,6 @@
 import React from 'react';
 import './Cart.css'
+import {Link} from "react-router-dom";
 
 export default function Cart(props){
     const {cartItems, onAdd, onRemove} = props;
@@ -32,9 +33,11 @@ export default function Cart(props){
                             <div className="cart-totalprice__sum">${totalPrice.toFixed(2)}</div>
                         </div>
                     <hr />
+                    <Link to="/Login">
                         <button className="cart-button__book">
                             Book
                         </button>
+                    </Link>
                 </>
             )}
         </div>

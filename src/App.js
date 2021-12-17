@@ -7,11 +7,12 @@ import Reviews from "./pages/Reviews";
 import Main from "./pages/Main";
 import Login from "./pages/Login";
 import Cart from "./pages/Cart";
+import Private from "./pages/Private";
 import Footer from "./components/Footer/Footer";
 import database from "./database/database";
 import Navbar from "./components/Navbar/Navbar";
-import {useState} from "react";
-
+import {createContext, useState} from "react";
+export const AppContext = createContext(null)
 
 function App() {
 const {tours} = database;
@@ -39,7 +40,13 @@ const onRemove = (tour) => {
     }
 }
 
+
+
+const [isAuth, setIsAuth] = useState(false)
+
+
   return (
+     // <AppContext.Provider value={{isAuth, setIsAuth}}>
     <div className="App">
       <Header>
           <Navbar countCartItems={cartItems.length}> </Navbar>
@@ -48,7 +55,11 @@ const onRemove = (tour) => {
         <main className="main">
 
          <Switch>
-            <Route path="/About" exact={true}>
+             <AppContext.Provider value={{isAuth, setIsAuth}}>
+             <Route path="/Private" exact={true}>
+                 <Private/>
+             </Route>
+             <Route path="/About" exact={true}>
              <About/>
             </Route>
             <Route path="/Contacts" exact={true}>
@@ -75,6 +86,7 @@ const onRemove = (tour) => {
                      </Main>
                  </div>
              </Route>
+             </AppContext.Provider>
              </Switch>
         </main>
         <Footer/>
