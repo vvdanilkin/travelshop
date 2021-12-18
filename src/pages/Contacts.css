@@ -1,6 +1,6 @@
-.form {
-    width: 42rem;
-    height: 28rem;
+.contacts-form {
+    width: 32rem;
+    height: 46rem;
     left: 412px;
     top: 82px;
     background: #E0FFFF;
@@ -29,8 +29,25 @@
     line-height: 50px;
     font-family: sans-serif;
     color: #787878;
-    text-align: center;
+    /*text-align: center;*/
     margin-bottom: 16px;
+    margin-right: auto;
+    margin-left: auto;
+    white-space: nowrap;
+
+}
+
+.subtitle-block {
+    margin-bottom: 8px;
+}
+
+.subtitle-block__text {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 16px;
+    color: #787878;
 }
 
 .input-block {
@@ -40,13 +57,13 @@
 .input-block__label {
     display: block;
     font-weight: bold;
-    font-family: Roboto;
     font-style: normal;
     font-size: 16px;
     line-height: 16px;
     color: #787878;
     width: 40px;
     margin-bottom: 4px;
+    margin-top: 4px;
 }
 
 .input-block__input {
@@ -58,6 +75,7 @@
     line-height: 36px;
     width: 100%;
     color: #787878;
+    height: 60px;
 }
 
 .input-block__input::placeholder {
@@ -66,6 +84,28 @@
     line-height: 36px;
     color: #CCC;
 }
+
+
+.input-block__message {
+    border: 2px solid #787878;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 6px 16px;
+    font-size: 28px;
+    line-height: 36px;
+    width: 100%;
+    color: #787878;
+}
+
+.input-block__message::placeholder {
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 36px;
+    color: #CCC;
+}
+
+
+
 
 .button-block__button {
     width: 40%;
@@ -82,14 +122,13 @@
 }
 
 
-
 @media (min-width: 320px) and (max-width: 768px) {
 
     main {
         padding: 16px;
     }
 
-    .form {
+    .contacts-form {
         width: 100%;
         height: 100%;
         padding-top: 38px;
@@ -111,8 +150,6 @@
 
 
 }
-
-
 
 
 

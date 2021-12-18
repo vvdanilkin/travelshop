@@ -31,8 +31,7 @@ const Login = () => {
 
     return (
 
-        <section>
-            <form onSubmit={submitForm} className="form">
+        <form onSubmit={submitForm} className="form">
                 <div className="form__title title-block">
                     <h2 className="title-block__title">Login</h2>
                 </div>
@@ -51,7 +50,6 @@ const Login = () => {
                 </div>
                   <button className="button-block__button" type="submit">Enter</button>
                 </form>
-        </section>
 
     );
 };

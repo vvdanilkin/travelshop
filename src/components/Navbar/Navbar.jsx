@@ -2,8 +2,8 @@ import React from "react";
 import './Navbar.css';
 import {Link} from "react-router-dom";
 
-const Navbar = () => {
 
+const Navbar = () => {
 
     return (
         <div className="navbar">
@@ -13,7 +13,6 @@ const Navbar = () => {
             <Link to="/reviews" className="navbar-item">Reviews</Link>
             <Link to="/cart" className="navbar-item">Cart</Link>
             <Link to="/login" className="navbar-item">Log in</Link>
-
         </div>
     );
 };
