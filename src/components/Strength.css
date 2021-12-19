@@ -1,0 +1,26 @@
+.strength-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 25rem;
+    height: 20rem;
+    text-align: center;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem;
+
+}
+
+.strength-card__image {
+    width: 40%;
+    object-fit: cover;
+    padding-bottom: 1.2rem;
+
+}
+
+.strength-card__name {
+    margin-bottom: 1rem;
+    color: #08457E;
+}

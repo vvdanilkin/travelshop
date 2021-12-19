@@ -16,6 +16,7 @@ export const AppContext = createContext(null)
 
 function App() {
 const {tours} = database;
+
 const [cartItems, setCartItems] = useState([]);
 const onAdd = (tour) => {
     const exist = cartItems.find(x => x.id === tour.id);
