@@ -24,7 +24,20 @@
     font-weight: bold;
 }
 
-.tour-card__button {
+.tour-card__buttonone {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #008080;
+    text-align: center;
+    cursor: pointer;
+    width: 50%;
+    font-size: 18px;
+    display: inline-block;
+}
+
+.tour-card__buttontwo {
     border: none;
     outline: 0;
     padding: 12px;
@@ -32,13 +45,18 @@
     background-color: #08457E;
     text-align: center;
     cursor: pointer;
-    width: 100%;
+    width: 50%;
     font-size: 18px;
+    display: inline-block;
 }
 
 .tour-card__button:hover {
     color: #82EE8D;
 }
 
+.tour-card__buttons {
+    text-align: center;
+    width: 100%;
+}
 
 

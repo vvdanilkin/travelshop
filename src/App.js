@@ -1,6 +1,7 @@
 import './App.css';
 import Header from './components/Header/Header'
 import {Route, Switch} from 'react-router-dom';
+import DetailProductPage from "./pages/DetailProductPage";
 import Contacts from "./pages/Contacts";
 import About from "./pages/About";
 import Reviews from "./pages/Reviews";
@@ -10,14 +11,24 @@ import Cart from "./pages/Cart";
 import Private from "./pages/Private";
 import Footer from "./components/Footer/Footer";
 import database from "./database/database";
-import Navbar from "./components/Navbar/Navbar";
-import {createContext, useState} from "react";
+import {createContext, useEffect, useState} from "react";
+import reviewsDb from "./database/reviewsDb";
 export const AppContext = createContext(null)
+
+
 
 function App() {
 const {tours} = database;
 
-const [cartItems, setCartItems] = useState([]);
+
+
+const [cartItems, setCartItems] = useState(localStorage.getItem('cartItems')? JSON.parse(localStorage.getItem('cartItems')): []);
+
+useEffect(() => {
+     localStorage.setItem('cartItems', JSON.stringify(cartItems));
+},[cartItems]);
+
+
 const onAdd = (tour) => {
     const exist = cartItems.find(x => x.id === tour.id);
     if(exist) {
@@ -27,6 +38,7 @@ const onAdd = (tour) => {
     } else {
         setCartItems([...cartItems, {...tour, qty: 1}]);
     }
+
 };
 
 const onRemove = (tour) => {
@@ -37,21 +49,26 @@ const onRemove = (tour) => {
         setCartItems(cartItems.map((x) => x.id === tour.id ?{...exist, qty: exist.qty - 1} : x
             )
         );
-
     }
+
 }
-
-
 
 const [isAuth, setIsAuth] = useState(false)
 
+    useEffect(() => {
+        if (localStorage.getItem('isAuth')) {
+            setIsAuth(true)
+        }
+    }, [])
+
+    useEffect(() => {
+        console.log('isAuth')
+    }, [isAuth])
 
   return (
-     // <AppContext.Provider value={{isAuth, setIsAuth}}>
+
     <div className="App">
-      <Header>
-          <Navbar countCartItems={cartItems.length}> </Navbar>
-          </Header>
+      <Header/>
 
         <main className="main">
 
@@ -87,6 +104,9 @@ const [isAuth, setIsAuth] = useState(false)
                      </Main>
                  </div>
              </Route>
+                 <Route path="/product/:tourId" exact={null}>
+                     <DetailProductPage/>
+                 </Route>
              </AppContext.Provider>
              </Switch>
         </main>
