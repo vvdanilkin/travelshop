@@ -11,6 +11,7 @@ const CreateReview = () => {
     const [title, setTitle] = useState('')
     const [name, setName] = useState('')
     const [text, setText] = useState('')
+    const orders = localStorage.getItem('orders')
     const createReview = (e) => {
         e.preventDefault()
         const newReview = {
@@ -26,6 +27,9 @@ const CreateReview = () => {
     }
 
     return (
+        <>
+            {orders && JSON.stringify(orders)}
+
         <form onSubmit={createReview} className='create-review-form'>
             <h2 className='create-review-form__title'>Your review</h2>
             <div className='create-review-form__container'>
@@ -53,6 +57,7 @@ const CreateReview = () => {
             <button className='create-review-form__button' type="submit">OK</button>
 
         </form>
+        </>
     )
 }
 

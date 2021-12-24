@@ -3,6 +3,7 @@ import './Cart.css'
 import {AppContext} from "../../contexts/AppContext";
 import {nanoid} from "../Private/Private";
 
+
 export default function Cart() {
     const {cartItems, setCartItems, onAdd, onRemove} = useContext(AppContext)
     const totalPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0);
@@ -52,7 +53,6 @@ export default function Cart() {
                                 <div className="cart-totalprice__sum">${totalPrice.toFixed(2)}</div>
                             </div>
                             <hr/>
-
                             <button className="cart-button__book" type="submit">
                                 Book
                             </button>
