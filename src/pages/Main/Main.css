@@ -6,17 +6,17 @@
 
 }
 
-.section-tours__title{
+.section-tours__title {
     flex: 2;
     text-align: center;
     margin-bottom: 2rem;
 }
 
-.card-container{
+.card-container {
     display: flex;
     flex-wrap: wrap;
-    gap:2rem;
+    gap: 2rem;
     margin: 1rem;
     justify-content: center;
 
-    }
+}

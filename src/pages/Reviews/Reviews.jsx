@@ -1,23 +1,16 @@
-import React, {useContext, useEffect, useState} from 'react';
-import reviewsDb from "../database/reviewsDb";
-import Private from "./Private";
-import {AppContext} from "../App";
+import React, {useContext} from 'react';
+import Private from "../Private/Private";
 import {Link} from "react-router-dom";
 import './Reviews.css'
+import {AppContext} from "../../contexts/AppContext";
 
 
 const Reviews = () => {
 
-    const {isAuth,setIsVisible} = useContext(AppContext)
-    const [reviews, setReviews] = useState([])
+    const {isAuth, setIsVisible, reviews, setReviews} = useContext(AppContext)
 
 
-    useEffect(() => {
-        const response = reviewsDb
-        setReviews(response)
-    }, [])
-
-    const deleteReviews= (id) => {
+    const deleteReviews = (id) => {
         const res = reviews.filter(item => item.id !== id)
         setReviews(res)
     }
@@ -36,7 +29,6 @@ const Reviews = () => {
     }
 
 
-
     return (
         <div className='reviews-container'>
             <h2 className="reviews-container__title">Our clients' reviews</h2>
@@ -48,7 +40,8 @@ const Reviews = () => {
                                 <h3 className='review-title'>{review.title}</h3>
                                 <span className='review-name'>{review.name}</span>
                                 <p className='review-text'>{review.text}</p>
-                                {isAuth && <button className='review-button__delete' onClick={() => deleteReviews(review.id)}>Delete</button>}
+                                {isAuth && <button className='review-button__delete'
+                                                   onClick={() => deleteReviews(review.id)}>Delete</button>}
                             </div>
                         </li>
                     )

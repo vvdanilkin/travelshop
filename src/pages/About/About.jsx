@@ -1,6 +1,6 @@
 import React from 'react';
-import strengths from "../database/strengths";
-import Strength from "../components/Strength";
+import strengths from "../../database/strengths";
+import Strength from "../../components/Strength";
 import './About.css'
 
 const About = () => {

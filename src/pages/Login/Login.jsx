@@ -1,10 +1,8 @@
 import React, {useContext, useState} from 'react';
 import './Login.css'
-import users from "../database/users";
-import {AppContext} from "../App";
-import { useHistory } from 'react-router-dom';
-
-
+import users from "../../database/users";
+import {useHistory} from 'react-router-dom';
+import {AppContext} from "../../contexts/AppContext";
 
 
 const Login = () => {
@@ -25,6 +23,7 @@ const Login = () => {
             return alert ('your password is not valid')
         }
         setIsAuth(true)
+        localStorage.setItem('isAuth','true')
         history.push('/Private')
 
     }

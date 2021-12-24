@@ -1,6 +1,6 @@
-.header{
+.header {
     position: sticky;
-    top:0;
+    top: 0;
     min-height: 80px;
     width: 100%;
     margin: 0 auto;
@@ -9,15 +9,14 @@
     align-items: center;
     overflow: hidden;
     background-color: #08457E;
-
 }
 
-.header-logo{
+.header-logo {
     text-decoration: none;
     text-transform: uppercase;
     color: white;
     padding-left: 40px;
-    }
+}
 
 .header-logo:hover {
     color: #82EE8D;
