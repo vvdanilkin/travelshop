@@ -11,6 +11,7 @@ import Login from "./pages/Login/Login";
 import Cart from "./pages/Cart/Cart";
 import Private from "./pages/Private/Private";
 import Footer from "./components/Footer/Footer";
+import Order from './pages/Order';
 import {AppContext} from './contexts/AppContext'
 import reviewsDb from "./database/reviewsDb";
 import {toursBase} from "./database/tours";
@@ -78,6 +79,9 @@ function App() {
 
                         <Route path="/Private" exact={true}>
                             <Private/>
+                        </Route>
+                        <Route path="/Order" exact={true}>
+                            <Order/>
                         </Route>
                         <Route path="/About" exact={true}>
                             <About/>

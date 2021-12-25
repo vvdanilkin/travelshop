@@ -2,13 +2,14 @@ import React, {useContext} from 'react';
 import './Cart.css'
 import {AppContext} from "../../contexts/AppContext";
 import {nanoid} from "../Private/Private";
+import {Link} from "react-router-dom";
 
 
 export default function Cart() {
     const {cartItems, setCartItems, onAdd, onRemove} = useContext(AppContext)
     const totalPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0);
 
-    function handleSubmit(e) {
+    /*function handleSubmit(e) {
         e.preventDefault()
         console.log("handleSubmit")
         let prevOrders = JSON.parse(localStorage.getItem('orders'))
@@ -22,10 +23,10 @@ export default function Cart() {
         setCartItems([])
 
         return alert('Заявка создана')
-    }
+    }*/
 
     return (
-        <form className="section-cart" onSubmit={handleSubmit}>
+        <form className="section-cart" /*onSubmit={handleSubmit}*/>
             <h2 className="section-cart__title">Your shopping cart</h2>
             <div className="cart-container">
                 <h2 className="cart-title">Cart items</h2>
@@ -53,9 +54,9 @@ export default function Cart() {
                                 <div className="cart-totalprice__sum">${totalPrice.toFixed(2)}</div>
                             </div>
                             <hr/>
-                            <button className="cart-button__book" type="submit">
-                                Book
-                            </button>
+                            <Link to='/Order'>
+                                <button className='cart-button__book' type="submit">Book</button>
+                            </Link>
 
                         </>
                     )}

@@ -1,14 +1,13 @@
-.contacts-form {
+.form__order {
     width: 32rem;
-    height: 46rem;
     left: 412px;
-    top: 82px;
+    top: 40px;
     background: #E0FFFF;
     box-shadow: 0px 0px 40px 10px;
     color: rgba(0, 0, 0, 0.25);
     border-radius: 20px;
-    padding: 24px 48px;
-    margin-top: 4rem;
+    padding: 20px 38px;
+    margin-top: 2rem;
     margin-left: auto;
     margin-right: auto;
 
@@ -21,38 +20,24 @@
 
 .title-block__title {
     width: 115px;
-    height: 50px;
+    height: 30px;
     left: 242px;
     top: 26px;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 30px;
+    color: #787878;
     line-height: 50px;
     font-family: sans-serif;
-    color: #787878;
-    /*text-align: center;*/
-    margin-bottom: 16px;
+    margin-bottom: 6px;
     margin-right: auto;
     margin-left: auto;
     white-space: nowrap;
 
 }
 
-.subtitle-block {
-    margin-bottom: 8px;
-    margin-top: 4px;
-}
-
-.subtitle-block__text {
-    display: block;
-    text-align: center;
-    font-weight: bold;
-    font-style: normal;
-    font-size: 16px;
-    color: #787878;
-}
 
 .input-block {
-    margin-bottom: 16px;
+    margin-bottom: 12px;
 }
 
 .input-block__label {
@@ -61,7 +46,7 @@
     font-style: normal;
     font-size: 16px;
     line-height: 16px;
-    color: #787878;
+    color: black;
     width: 40px;
     margin-bottom: 4px;
     margin-top: 4px;
@@ -70,19 +55,19 @@
 .input-block__input {
     border: 2px solid #787878;
     box-sizing: border-box;
-    border-radius: 10px;
-    padding: 6px 16px;
-    font-size: 28px;
-    line-height: 36px;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 18px;
+    line-height: 16px;
     width: 100%;
     color: #787878;
-    height: 60px;
+    height: 40px;
 }
 
 .input-block__input::placeholder {
     font-weight: bold;
-    font-size: 28px;
-    line-height: 36px;
+    font-size: 16px;
+    line-height: 26px;
     color: #CCC;
 }
 
@@ -93,19 +78,17 @@
     border-radius: 10px;
     padding: 6px 16px;
     font-size: 28px;
-    line-height: 36px;
+    line-height: 26px;
     width: 100%;
     color: #787878;
 }
 
 .input-block__message::placeholder {
     font-weight: bold;
-    font-size: 28px;
+    font-size: 16px;
     line-height: 36px;
     color: #CCC;
 }
-
-
 
 
 .button-block__button {
@@ -122,39 +105,56 @@
     margin: 40px auto;
 }
 
+.order-cart__title {
+    flex: 2;
+    font-size: 1.2rem;
+    color: black;
+}
 
-@media (min-width: 320px) and (max-width: 768px) {
+.order-item__row {
+    display: flex;
+    justify-content: space-between;
+}
 
-    main {
-        padding: 16px;
-    }
+.order-item__name {
+    flex: 2;
+    font-size: 1.2rem;
+    color: black;
+}
 
-    .contacts-form {
-        width: 100%;
-        height: 100%;
-        padding-top: 38px;
-    }
-
-    .input-block__label {
-        font-size: 24px;
-        line-height: 16px;
-        margin-bottom: 8px;
-    }
-
-
-    .form__button {
-        margin-top: 54px;
-        font-size: 32px;
-        line-height: 16px;
-        padding: 32px 64px;
-    }
-
-
+.order-item__empty {
+    flex: 2;
+    font-size: 1.2rem;
+    color: red;
 }
 
 
+.order-item__qtyprice {
+    flex: 2;
+    text-align: right;
+    color: black;
+    font-size: 1.2rem;
+}
 
+.order-totalprice {
+    display: flex;
+    font-weight: bold;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
 
+}
+
+.order-totalprice__title {
+    flex: 2;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.order-totalprice__sum {
+    flex: 1;
+    text-align: right;
+}
 
 
 

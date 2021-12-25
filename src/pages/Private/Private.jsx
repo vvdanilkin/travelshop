@@ -2,6 +2,8 @@ import './Private.css'
 import React, {useContext, useState} from 'react';
 import {customAlphabet} from "nanoid";
 import {AppContext} from "../../contexts/AppContext";
+import {Link} from "react-router-dom";
+
 
 export const nanoid = customAlphabet('1234567890', 10)
 
@@ -28,7 +30,8 @@ const CreateReview = () => {
 
     return (
         <>
-            {orders && JSON.stringify(orders)}
+            {/*{orders && JSON.stringify(orders)}*/}
+
 
         <form onSubmit={createReview} className='create-review-form'>
             <h2 className='create-review-form__title'>Your review</h2>
@@ -54,9 +57,15 @@ const CreateReview = () => {
                           onChange={(e) => setText(e.target.value)}
                 />
             </div>
-            <button className='create-review-form__button' type="submit">OK</button>
+            <button className='create-review-form__button' type="submit">Submit</button>
 
         </form>
+
+            <div className='order-link__container'>
+                <Link to='/Order'>
+                    <button className='order-link__button' type="submit">Check your orders</button>
+                </Link>
+            </div>
         </>
     )
 }

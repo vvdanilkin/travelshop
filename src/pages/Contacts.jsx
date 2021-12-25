@@ -14,6 +14,7 @@ const Contacts = () => {
             "user_f5U6tvu84KraZqoE2vJ7b"
         ).then(res=>{
             console.log(res);
+            return alert('Your message was successfully delivered')
         }).catch(err=> console.log(err));
     }
 
