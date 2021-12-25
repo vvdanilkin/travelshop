@@ -35,7 +35,7 @@
 .footer-list__item {
     list-style-type: none;
     color: white;
-    font-size: 18px;
+    font-size: 1.2rem;
 }
 
 .footer-list__link {
@@ -49,3 +49,24 @@
 .footer-list__link:hover {
     color: #82EE8D;
 }
+
+@media (max-width: 480px) {
+    .footer {
+        width: 100%;
+        display: flex;
+    }
+    .footer-list {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-row {
+        flex-wrap: wrap;
+        justify-content: center;
+        display: flex;
+    }
+
+}
+

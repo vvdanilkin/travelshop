@@ -22,3 +22,13 @@
     color: #ffffff;
     width: 1.5rem;
 }
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
