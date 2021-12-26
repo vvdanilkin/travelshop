@@ -6,7 +6,7 @@ export const toursBase = [
         text: 'A one-day tour of Moscow is a great way to get a glimpse of the history and architectural heritage of the Russian capital. Our tour includes Red Square, the heart of Russia, and a chance to see the ancient residences of Russian rulers, now used for presidential and state occasions. You can make a wish to return at ‘Kilometer Zero’, see the beautiful stations on the Moscow Metro, and get many useful tips from your Moscow tour guide to help you navigate the city on your own. Our guide will come to your hotel (lobby area) or any other indicated address to begin the tour from there. If you stay outside of the city area, we will offer you alternative meeting options.',
         price: 179,
         dates: '08.01.2022, 22.01.2022, 04.02.2022, 09.02.2022, 18.04.2022, 04.05.2022',
-        image: "../assets/tours/redsquare.jpg"
+        image: "../assets/tours/redsquare.JPG"
     },
     {
         id: '2',
